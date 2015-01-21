@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-
+from jwell import *
 urlpatterns = patterns('',
     # Examples:
     #url(r'^$', 'front.views.index', name='index'),
@@ -10,6 +10,6 @@ urlpatterns = patterns('',
     url(r'^bills/', include('bills.urls')), 
     url(r'^$', 'bills.views.bil_index', name='bil_index'),
     url(r'^admin/', include(admin.site.urls)),
-
+#    url(r'^index/', front.views.index),
 )
 

@@ -88,7 +88,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
-TEMPLATE_DIRS = (
-    
-    os.path.join(BASE_DIR, 'template'),
-)
+TEMPLATE_DIRS = ['/work/jwell/templates/']

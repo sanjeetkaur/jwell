@@ -8,11 +8,11 @@ from bills.models import expenses, Choice
 class ChoiceInline(admin.TabularInline):
     model = Choice
     extra = 5
-    list_display = ['carat', 'item', 'weight', 'cost', 'labour_cost']
+    list_display = ['carat', 'item', 'weight', 'labour_cost']
 
 
 class expensesAdmin(admin.ModelAdmin):
-    fields =  ['name', 'customer_id','rate_of_pure']
+    fields =  ['purchase_order_no', 'rate_of_pure', 'customer_id']
 #    list_display = ['carat', 'item', 'weight', 'cost', 'labour_cost']
 
     inlines = [ChoiceInline]

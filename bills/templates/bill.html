@@ -1,0 +1,41 @@
+
+<html lang="en">
+<head><title>bill</title></head>
+<body>
+    <h1>TAJ JWELLERS</h1>
+    {% block content %}
+    <div class="container">
+    <h2>Bill</h2>
+    </div>
+    <div class = "bill-left">
+    <p><span id='highlight'>Purchase Order No. : </span>{{expenses.purchase_order_no}}</p>
+    <p><span id='dated'><span id='highlight'>Dated: </span>{{front.category.date}}
+<table class = "data" border = "1px">
+    <tr>
+      <th>S.no.</th>
+      <th>Charges For</th>
+      <th>Weight</th>
+      <th>Carat</th>
+      <th>Price</th>      
+    </tr>
+    {% for i in epenses.carat %}
+    <tr>
+      <td>{{forloop.counter}}</td>
+      <td>{{i.item}}</td>
+      <td>{{i.weight}}</td>
+      <td>{{i.carat}}</td>
+      <td>{{i.cost}}</td>    
+    </tr>
+    {% endfor %}
+t
+    <tr>
+    <td><b>Sale Tax</b></td>
+    <td colspan="3"></td>
+        <td align="right"><b>{{sale_tax}}</b></td>
+    <td><b>Total</b></td>
+    <td colspan="3"></td>
+        <td align="right"><b>{{total_cost}}</b></td>
+
+    {% endblock %}
+</body>
+</html>
